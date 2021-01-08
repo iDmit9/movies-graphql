@@ -10,6 +10,7 @@ require('dotenv').config()
 mongoose.connect(process.env.DB_CONNECTION_ADDRESS, {
    useNewUrlParser: true,
    useUnifiedTopology: true,
+   useFindAndModify: false
 })
 
 app.use('/graphql', graphqlHTTP({
